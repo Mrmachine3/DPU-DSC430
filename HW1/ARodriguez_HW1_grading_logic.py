@@ -9,7 +9,8 @@
 # Alternate Usage: /usr/bin/python3 -m ARodriguez_HW1_grading_logic
 # Alternate CLI Usage: ./ARodriguez_HW1_grading_logic.py
 # Git Repo URL: https://github.com/Mrmachine3/DPU-DSC430/blob/main/HW1/ARodriguez_HW1_grading_logic.py
-# Video Explanation URL: https://youtu.be/YyjtY1n2jL0
+# Video Explanation URL: https://youtu.be/kPWg_1PqJgM
+#
 # Description:
 # This program can be used to derive a subjective score based on a developer's
 # self-assessment of the quality of their source code and against a list of 
