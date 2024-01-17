@@ -5,11 +5,11 @@
 
 # Author: Anthony M. Rodriguez
 # Date: 01/15/2024
-# Path: /mnt/c/Users/atone/Desktop/DSC430/A.Rodriguez_HW2_coprime.py
+# Path: /mnt/c/Users/atone/Desktop/DPU-DSC430/HW1/A.Rodriguez_HW2_coprime.py
 # Usage: /usr/bin/python3 ARodriguez_HW1_coprime.py
 # Alternate Usage: /usr/bin/python3 -m ARodriguez_HW1_coprime
 # Alternate CLI Usage: ./ARodriguez_HW1_coprime.py
-# Git Repo URL: https://github.com/Mrmachine3/DPU-DSC430/blob/main/HW1/ARodriguez_HW1_coprime.py
+# Git Repo URL: 
 # Description:
 # This program is used to derive a boolean result of whether two integers are
 # coprime numbers, which are pairs of integers that do not have any common
