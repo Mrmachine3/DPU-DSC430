@@ -4,11 +4,12 @@
 #####################################################################################
 # Author: Anthony M. Rodriguez
 # Date: 01/15/2024
-# Path: /mnt/c/Users/atone/Desktop/DPU-DSC430/HW1/A.Rodriguez_HW1_grading_logic.py
+# Path: /mnt/c/Users/atone/Desktop/DPU-DSC430/HW1/ARodriguez_HW1_grading_logic.py
 # Usage: /usr/bin/python3 ARodriguez_HW1_grading_logic.py
 # Alternate Usage: /usr/bin/python3 -m ARodriguez_HW1_grading_logic
 # Alternate CLI Usage: ./ARodriguez_HW1_grading_logic.py
 # Git Repo URL: 
+# Video Explanation URL: 
 # Description:
 # This program can be used to derive a subjective score based on a developer's
 # self-assessment of the quality of their source code and against a list of 
@@ -18,6 +19,7 @@
 import sys
 
 # FUNCTIONS:
+## HELPER FUNCTION
 def results_check(result):
     """Function returns the earned point value as an integer for each functional
     or non-functional quality check being evaluated by the program, as well as a
@@ -29,7 +31,7 @@ def results_check(result):
     Args:
         result (str): A 'yes' or 'no' value entered by the end user as a response to 
                 a code quality question, or an whole integer within the range
-                of 1 - 10
+                of 0 - 10
 
     Attributes:
         earned_points (int): An value that represents points earned per
@@ -54,6 +56,7 @@ def results_check(result):
 
     return earned_points
 
+## FUNCTIONAL REQUIREMENTS IMPLEMENTATION CHECKS 
 def modular_check():
     """Function to self-check if single '.py' file was/will be submitted to D2L
     """
@@ -111,12 +114,13 @@ def publish_link_check():
 
     return results_check(result)
 
+## NON-FUNCTIONAL REQUIREMENTS IMPLEMENTATION CHECKS 
 def code_correctness_check():
     """Function to execute a self-check rating to determine if the source code
     logic was correctly implemented to achieve the intended objective
     """
     print(f"  NOTE: Consider how well the code aligns with the requirements and requested specifications")
-    result = input(f"  - On a scale of 1 - 10, how would you evaluate the quality and accuracy of the code? ")
+    result = input(f"  - How would you evaluate the quality and accuracy of the code? ")
 
     return results_check(result)
 
@@ -241,7 +245,7 @@ def calculate_score():
     print(f"\n")
 
     # Function calls for all non-functional requirement code quality checks
-    print(f"For the following set of questions, rate your response on a scale of 1 - 10: ")
+    print(f"For the following set of questions, rate your response on a scale of 0 - 10: ")
     code_correctness_points = code_correctness_check()
     code_elegance_points = code_elegance_check()
     code_hygiene_points = code_hygiene_check()
