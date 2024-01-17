@@ -9,7 +9,7 @@
 # Usage: /usr/bin/python3 ARodriguez_HW1_coprime.py
 # Alternate Usage: /usr/bin/python3 -m ARodriguez_HW1_coprime
 # Alternate CLI Usage: ./ARodriguez_HW1_coprime.py
-# Git Repo URL: 
+# Git Repo URL: https://github.com/Mrmachine3/DPU-DSC430/blob/main/HW1/ARodriguez_HW1_coprime.py
 # Description:
 # This program is used to derive a boolean result of whether two integers are
 # coprime numbers, which are pairs of integers that do not have any common
