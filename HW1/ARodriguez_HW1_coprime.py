@@ -10,7 +10,7 @@
 # Alternate Usage: /usr/bin/python3 -m ARodriguez_HW1_coprime
 # Alternate CLI Usage: ./ARodriguez_HW1_coprime.py
 # Git Repo URL: https://github.com/Mrmachine3/DPU-DSC430/blob/main/HW1/ARodriguez_HW1_coprime.py
-# Video Explanation URL: https://youtu.be/aJWDLB9HYGk (outaded as of 11:25pm, will resubmit after deadline)
+# Video Explanation URL: https://youtu.be/qkcvdnN4Ly0
 #
 # Description:
 # This program is used to derive a boolean result of whether two integers are
