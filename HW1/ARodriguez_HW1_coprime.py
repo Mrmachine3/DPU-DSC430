@@ -9,7 +9,9 @@
 # Usage: /usr/bin/python3 ARodriguez_HW1_coprime.py
 # Alternate Usage: /usr/bin/python3 -m ARodriguez_HW1_coprime
 # Alternate CLI Usage: ./ARodriguez_HW1_coprime.py
-# Git Repo URL: 
+# Git Repo URL: https://github.com/Mrmachine3/DPU-DSC430/blob/main/HW1/ARodriguez_HW1_coprime.py
+# Video Explanation URL: https://youtu.be/PS-LUmyGk9E
+#
 # Description:
 # This program is used to derive a boolean result of whether two integers are
 # coprime numbers, which are pairs of integers that do not have any common
@@ -53,13 +55,11 @@ def coprime_test_loop():
     """
     while True:
         try:
+            # Split user entry at the comma and unpack into variables a and b
             a,b = input(f"Enter two numbers seperated by a comma (press Ctrl + C, to quit): \n").split(",")
 
-            a = int(a)
-            b = int(b)
-
-            result = coprime(a,b)
-            print(f"Are the numbers {a} and {b} coprime numbers? {result}\n")
+            # Printing f-string results with embedded coprime function and variables cast into int() function
+            print(f"Are the numbers {a} and {b} coprime numbers? {coprime(int(a),int(b))}\n")
 
         except KeyboardInterrupt:
             break
