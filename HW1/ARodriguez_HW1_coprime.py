@@ -10,7 +10,7 @@
 # Alternate Usage: /usr/bin/python3 -m ARodriguez_HW1_coprime
 # Alternate CLI Usage: ./ARodriguez_HW1_coprime.py
 # Git Repo URL: https://github.com/Mrmachine3/DPU-DSC430/blob/main/HW1/ARodriguez_HW1_coprime.py
-# Video Explanation URL: https://youtu.be/PS-LUmyGk9E
+# Video Explanation URL: https://youtu.be/aJWDLB9HYGk
 #
 # Description:
 # This program is used to derive a boolean result of whether two integers are
@@ -18,7 +18,6 @@
 # factors other than 1.
 
 # LIBRARIES:
-import sys
 from math import gcd
 
 # FUNCTIONS:
@@ -34,6 +33,8 @@ def coprime(a,b):
         (bool): returns whether the greatest common divisor is equal to 1
 
     """
+    # call gcd function and pass number parameters to return the greatest common
+    # divisor which then compared to 1
     return gcd(a,b) == 1
 
 def coprime_test_loop():
@@ -68,7 +69,6 @@ def coprime_test_loop():
 def main():
     """Function call to invoke coprime_test_loop function"""
     coprime_test_loop()
-
 
 # Primary function call that invokes the main function
 if __name__ == "__main__":
