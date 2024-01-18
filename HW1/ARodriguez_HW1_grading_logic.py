@@ -205,7 +205,7 @@ def late_submission_check():
 
 
 # MAIN PROGRAM:
-def calculate_score():
+def compute_grade():
     """Function returns the percentage total points earned, possible points, and score
 
     Attributes:
@@ -281,7 +281,7 @@ def calculate_score():
 
 # Primary function call that invokes the main function
 if __name__ == "__main__":
-    score = calculate_score()
+    score = compute_grade()
 
     # Course grading scale
     if score >= 0.90:
