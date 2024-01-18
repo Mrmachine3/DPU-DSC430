@@ -32,6 +32,8 @@ cat <<EOF > $o_file
 # Alternate Python Usage: $python3_m_usage
 # Alternate CLI Usage: $source_usage
 # Git Repo URL: $git_repo_url
+# Video Explanation URL:
+#
 # Description:
 
 
@@ -47,3 +49,9 @@ def main(name):
 if __name__ == "__main__":
     main("Anthony")
 EOF
+
+
+# TODOS
+# - [ ] TODO: Add function to capture header template info for python file
+# - [ ] TODO: Add function to capture header template info for yaml file
+# - [ ] TODO: Add function to capture header template info for markdown file
