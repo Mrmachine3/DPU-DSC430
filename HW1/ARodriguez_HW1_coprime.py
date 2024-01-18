@@ -18,12 +18,11 @@
 # factors other than 1.
 
 # LIBRARIES:
-from math import gcd
 
 # FUNCTIONS:
 def coprime(a,b):
     """Function returns the greatest common divisor or highest common factor
-    of two numbers passed in as parameters.
+    of two numbers passed in as parameters by performing mathematical functions
 
     Args:
         a (str): An integer
@@ -33,9 +32,22 @@ def coprime(a,b):
         (bool): returns whether the greatest common divisor is equal to 1
 
     """
-    # call gcd function and pass number parameters to return the greatest common
-    # divisor which then compared to 1
-    return gcd(a,b) == 1
+    # Check if a is greater than b, if true then assign variable z the value of a, otherwise the value of b
+    if a > b:
+        z = a
+    else:
+        z = b
+
+    # In a while loop check that z is divisible by both a and b to determine the least common multiple (LCM)
+    while True:
+        # Only break the while loop if both conditions are met, otherwise keep incrementing the value of z
+        if (z % a == 0) and (z % b == 0):
+            lcm = z
+            break
+        z += 1
+
+    # The returned value implements a mathematical calculation to compute the greatest common divisor as an int
+    return (a*b)/lcm
 
 def coprime_test_loop():
     """Function executes a continous loop requiring input of two numbers that are
@@ -59,8 +71,13 @@ def coprime_test_loop():
             # Split user entry at the comma and unpack into variables a and b
             a,b = input(f"Enter two numbers seperated by a comma (press Ctrl + C, to quit): \n").split(",")
 
+            if coprime(int(a),int(b)) == 1:
+                result = True
+            else:
+                result = False
+
             # Printing f-string results with embedded coprime function and variables cast into int() function
-            print(f"Are the numbers {a} and {b} coprime numbers? {coprime(int(a),int(b))}\n")
+            print(f"Are the numbers {a} and {b} coprime numbers? {result}\n")
 
         except KeyboardInterrupt:
             break
