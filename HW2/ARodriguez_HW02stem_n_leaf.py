@@ -20,6 +20,59 @@
 import sys
 
 # FUNCTIONS
+def greeting():
+    """Function to greet user"""
+    print(f"\nWelcome to the stem and leaf chart plotter tool!")
+
+def menu():
+    """Function to show menu of options"""
+    print(f"  1 - StemAndLeaf1.txt")
+    print(f"  2 - StemAndLeaf2.txt")
+    print(f"  3 - StemAndLeaf3.txt")
+    print(f"  Exit/Ctrl + C - Exit program")
+
+def read_option(selection):
+    """Function to store end-user option selection indicating which file to process
+
+    Args:
+        selection (str): A string representing a menu selection
+
+     Returns:
+        filename (str): A string representing the name of the file listed in menu options
+    """
+    # If-else condition to assign selected file to process to filename variable
+    # End-user may also enter exit or press Ctrl + C to exit program
+    if selection == "1":
+        filename = "StemAndLeaf1.txt"
+    elif selection == "2":
+        filename = "StemAndLeaf2.txt"
+    elif selection == "3":
+        filename = "StemAndLeaf3.txt"
+    elif selection.lower() == "exit":
+        print(f"Exiting...")
+        sys.exit()
+    else:
+        pass
+
+    return filename
+
+def read_file(filename):
+    """Function to open each file in a context manager to read dataset into memory
+
+    Args:
+        filename (str): The filename selected from the read_option() function
+
+     Returns:
+        data (list): A list of numbers stripped of newlines and trailing whitespace
+    """
+    # Open file in context manager in read-mode
+    with open(filename, 'r') as raw:
+        # In a list comprehension, iterate through lines in context called raw
+        # strip all whitespace and convert to integer
+        data = [int(line.rstrip()) for line in raw]
+    
+    return data
+
 def compute_stemleaves(data):
     """Function returns the compiled output representing a stem and leaf graph
 
@@ -87,50 +140,6 @@ def plot_stem(filename,d):
     return "".join(out)
 
 
-def read_file(filename):
-    """Function to open each file in a context manager to read dataset into memory
-
-    Args:
-        filename (str): The filename selected from the read_option() function
-
-     Returns:
-        data (list): A list of numbers stripped of newlines and trailing whitespace
-    """
-    # Open file in context manager in read-mode
-    with open(filename, 'r') as raw:
-        # In a list comprehension, iterate through lines in context called raw
-        # strip all whitespace and convert to integer
-        data = [int(line.rstrip()) for line in raw]
-    
-    return data
-
-
-def read_option(selection):
-    """Function to store end-user option selection indicating which file to process
-
-    Args:
-        selection (str): A string representing a menu selection
-
-     Returns:
-        filename (str): A string representing the name of the file listed in menu options
-    """
-    # If-else condition to assign selected file to process to filename variable
-    # End-user may also enter exit or press Ctrl + C to exit program
-    if selection == "1":
-        filename = "StemAndLeaf1.txt"
-    elif selection == "2":
-        filename = "StemAndLeaf2.txt"
-    elif selection == "3":
-        filename = "StemAndLeaf3.txt"
-    elif selection.lower() == "exit":
-        print(f"Exiting...")
-        sys.exit()
-    else:
-        pass
-
-    return filename
-
-
 # MAIN PROGRAM FUNCTION
 def main():
     """Function call to invoke a while True loop to welcome user and prompt for a selection
@@ -142,12 +151,12 @@ def main():
     # Start a while true loop to continuously prompt user for option selection
     while True:
         try:
-            print(f"\nWelcome to the stem and leaf chart plotter tool!")
-            print(f"  1 - StemAndLeaf1.txt")
-            print(f"  2 - StemAndLeaf2.txt")
-            print(f"  3 - StemAndLeaf3.txt")
-            print(f"  Exit/Ctrl + C - Exit program")
-        
+            # Invoke user greeting
+            greeting()
+
+            # Invoke menu option
+            menu()
+            
             selection = str(input(f"\nEnter option as 1, 2, 3, or exit to quit: "))
 
             # Invoke read_option() with selection as parameter to extract filename
