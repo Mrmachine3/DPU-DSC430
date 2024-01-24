@@ -13,9 +13,9 @@ I have not given or received any unauthorized assistance on this assignment.
 
 ---
 
-### ***Top Down Design of Stem and Leaf Plot***
+## ***Top Down Design of Stem and Leaf Plot***
 
-
+### Functional Design
 **main() function**:
 This function invokes the top level functions that greet the user, displays a menu, reads menu selection, reads dataset into memory, computes stem and leaf list, and charts the stem and leaf plot.
 
@@ -36,5 +36,18 @@ This function generates a list of all stem and leaf values from the data set rea
 
 **plot_stem() function**:
 This function displays a text representation of the stem and leaf plot chart
+
+### Design Considerations
+- What are the important steps in displaying a stem-and leaf plot?
+- How will your main function be organized?
+- How many levels does your design have? Choose one of the lower level functions to describe in more detail.
+
+### Implementation Considerations
+- How is your main function organized?
+- How does your program automatically determine how many digits the stems and leaves should have?
+- Show the loop(s) were your print out the stem-and-leaf plot and briefly explain how it works.
+- The data files provided are very “friendly”. How would you design a datafile to confound your program?
+
+### Top Down Design Diagram
 
 ![Stem and Leaf Plot Mermaid Diagram](mermaid.png)
