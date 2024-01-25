@@ -6,7 +6,7 @@ read assign
 echo "Enter week # (Example: 01, 02, etc): "
 read number
 
-o_file="HW$number-$assign.py"
+o_file="ARodriguez_HW$number_$assign.py"
 
 # Evaluate the variables
 python3_path=$(which python3)
@@ -41,11 +41,12 @@ cat <<EOF > $o_file
 
 # FUNCTIONS
 
-# MAIN PROGRAM
+# MAIN PROGRAM FUNCTION
 def main(name):
     print(f"Hello {name}!")
 
 
+# MAIN PROGRAM INVOCATION
 if __name__ == "__main__":
     main("Anthony")
 EOF
