@@ -9,7 +9,7 @@
 # Alternate Python Usage: /usr/bin/python3 -m ARodriguez_HW02stem_n_leaf
 # Alternate CLI Usage: ./ARodriguez_HW02stem_n_leaf.py
 # Git Repo URL: https://github.com/Mrmachine3/DPU-DSC430.git
-# Video Explanation URL:
+# Video Explanation URL: https://youtu.be/d6g_LhtH374
 #
 # Description:
 # This program reads the contents of a file containing numbers on each line and
