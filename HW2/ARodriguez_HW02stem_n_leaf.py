@@ -78,7 +78,6 @@ def compute_stemleaves(data):
 
     Args:
         data (list): A list of numbers compiled by the read_file() function
-
     Returns:
         d (list): A list of stems and leaves derived from the list of numbers
         passed into the function
@@ -105,7 +104,6 @@ def plot_stem(filename,d):
     Args:
         filename (str): The filename selected from the read_option() function
         d (list): A list of stems and leaves derived from the list of numbers
-
     Returns:
         (str): A string representation of the list of stems and leaves derived
         from the list of numbers passed into the function
