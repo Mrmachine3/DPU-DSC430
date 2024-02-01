@@ -4,15 +4,15 @@
 #####################################################################################
 # Author: Anthony M. Rodriguez
 # Date: 01/29/2024
-# Path: /mnt/c/Users/atone/Desktop/DPU-DSC430/HW3/ARodriguez_HWgoldbach_conjecture.py
-# Usage: /usr/bin/python3 ARodriguez_HWgoldbach_conjecture.py
-# Alternate Python Usage: /usr/bin/python3 -m ARodriguez_HWgoldbach_conjecture
-# Alternate CLI Usage: ./ARodriguez_HWgoldbach_conjecture.py
+# Usage: /usr/bin/python3 ARodriguez_HW03goldbach_conjecture.py
+# Alternate Python Usage: /usr/bin/python3 -m ARodriguez_HW03goldbach_conjecture
+# Alternate CLI Usage: ./ARodriguez_HW03goldbach_conjecture.py
 # Git Repo URL: https://github.com/Mrmachine3/DPU-DSC430.git
-# Video Explanation URL:
+# Video Explanation URL: https://youtu.be/LeCp_A5xP_A
 #
 # Description:
-
+# This is a python program that displays the sum of two prime numbers resulting
+# in an even number.
 
 # LIBRARIES
 
