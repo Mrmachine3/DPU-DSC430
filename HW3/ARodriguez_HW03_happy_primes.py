@@ -8,7 +8,7 @@
 # Alternate Python Usage: /usr/bin/python3 -m ARodriguez_HW03_happy_primes
 # Alternate CLI Usage: ./ARodriguez_HW03_happy_primes.py
 # Git Repo URL: https://github.com/Mrmachine3/DPU-DSC430.git
-# Video Explanation URL:
+# Video Explanation URL: https://youtu.be/3Asu9x6mCC0
 #
 # Description:
 # A program to calculate whether a user given number is either of the 
