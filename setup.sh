@@ -3,7 +3,7 @@
 echo "Enter assignment name: "
 read assign
 
-o_file="ARodriguez_HW$assign.py"
+o_file="ARodriguez_HW_$assign.py"
 
 # Evaluate the variables
 python3_path=$(which python3)
