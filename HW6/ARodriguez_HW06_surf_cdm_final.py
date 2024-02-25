@@ -42,7 +42,7 @@ class TextParser(HTMLParser):
             self.in_text_tag = False
 
     def handle_data(self, data):
-        pattern = [r'\w[a-zA=Z]+']
+        pattern = [r'[a-zA=Z]+']
         if self.in_text_tag:
             text = data.split()
             for string in text:
@@ -105,24 +105,30 @@ def match_regex(data, patterns):
     return list(dict.fromkeys(matches))
 
 def find_url(url):
-    print(f"Visiting the following:\n  {url}")
-    req = Request(url,headers={'User-Agent': 'Mr.Machine'})
-    content = urlopen(req).read().decode('utf-8')
-    linkcollector = LinkParser()
-    linkcollector.feed(content)
-    urls = linkcollector.get_links()
+    try:
+        print(f"Visiting the following:\n  {url}")
+        req = Request(url,headers={'User-Agent': 'Mr.Machine'})
+        content = urlopen(req).read().decode('utf-8')
+        linkcollector = LinkParser()
+        linkcollector.feed(content)
+        urls = linkcollector.get_links()
 
-    return urls
+        return urls
+    except:
+        pass
 
 def get_html(url):
-    print(f"\nRetrieving html content from the following:\n  {url}")
-    req = Request(url,headers={'User-Agent': 'Mr.Machine'})
-    content = urlopen(req).read().decode('utf-8')
-    wordcollector = TextParser()
-    wordcollector.feed(content)
-    words = wordcollector.get_words()
+    try:
+        print(f"\nRetrieving html content from the following:\n  {url}")
+        req = Request(url,headers={'User-Agent': 'Mr.Machine'})
+        content = urlopen(req).read().decode('utf-8')
+        wordcollector = TextParser()
+        wordcollector.feed(content)
+        words = wordcollector.get_words()
 
-    return words
+        return words
+    except:
+        pass
 
 def evaluate_frequency(words):
     # Initialize empty word dictionary
@@ -144,10 +150,11 @@ def main(url):
     all_words = []
 
     for url in urls:
-        words = get_html(url)
-        for word in  words:
-            all_words.append(word)
-        #break
+        if 'cdm.depaul.edu' in url:
+            words = get_html(url)
+            if words:
+                for word in  words:
+                    all_words.append(word)
 
     # Evaluate frequency of words from HTML text body
     freq = evaluate_frequency(all_words)
@@ -168,9 +175,13 @@ def main(url):
 
 # MAIN PROGRAM INVOCATION
 if __name__ == "__main__":
-    #url = input(f"Enter target URL: ")
-    #url = 'https://www.example.com'
-    #url = 'https://www.secdaemons.org/'
-    url = 'https://www.cdm.depaul.edu'
+    user_input = input(f"Enter target URL: ")
+
+    if not user_input or user_input == '':
+        default_url = 'https://www.cdm.depaul.edu'
+        print(f"No input entered. Using default URL: '{default_url}'")
+        url = default_url
+    else:
+        url = user_input
 
     main(url)
