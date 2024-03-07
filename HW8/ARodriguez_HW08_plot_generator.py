@@ -8,13 +8,24 @@
 # Alternate Python Usage: /usr/bin/python3 -m ARodriguez_HW08_plot_generator
 # Alternate CLI Usage: ./ARodriguez_HW08_plot_generator.py
 # Git Repo URL: https://github.com/Mrmachine3/DPU-DSC430.git
-# Video Explanation URL:
+# Video Explanation URL: https://youtu.be/VysoS-kUV4c
 #
 # Description:
+# The program generates plot descriptions for stories through the
+# following methods:
+# - simple
+# - random
+# - interactive
+#
+# It achieves this by implementing a PlotViewer class that serves as the
+# interface for registering plot generators and interacting with users.
+# 
+# The PlotViewer class abstracts away the complexities of generating
+# plots and handles interactions between the user and the plot generators,
+# allowing for flexible story creation.
 
 
 # LIBRARIES
-import os
 import random
 
 # CLASSES
