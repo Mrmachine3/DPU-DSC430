@@ -23,30 +23,13 @@ class Planet():
         self.year = year
 
     def position(self, day):
-        """
-        to find the length of each leg of a right triangle, divide the hypotenuse by the sqrt of 2
-        
-        45-45-90 triangle with a hypotenuse of 30
-        a = 30/math.sqrt(2)
-        b = 30/math.sqrt(2)
-        c = 30
-
-        Calculate the angel by finding a fraction equal to the day divided by the value of a full year
-        multiply the fraction by 360 degrees to find the angle.
-
-        example:
-        day = 22
-        year = 88
-        
-        (22/88) * 360 = 90
-        (33/88) * 360 = 135 
-        """
-        radians = math.radians(((day/self.year)*360))
+        radians = math.radians(day/self.year)*360
         
         x = math.cos(radians) * self.radius
         y = math.sin(radians) * self.radius
 
-        return f'{x:.2f}, {y:.2f}'
+        return round(x,2),round(y,2)
+    
         
 # FUNCTIONS
 def test_mercury():
@@ -54,8 +37,9 @@ def test_mercury():
     
     days = [0,22,33,440]
 
-    for day in days:
-        print(f"Day {day}:\n  {mercury.position(day)}\n")
+    if DEBUG == True:
+        for day in days:
+            print(f"Day {day}: {mercury.position(day)}\n")
 
 def big_bang():
     data = {
@@ -71,24 +55,43 @@ def big_bang():
     
     planets = []
 
-    for name, (radius, days) in data.items():
-        print(f"Creating {name}: \n  {name.lower()} = Planet({radius}, {days})")
-        planet = Planet(radius, days)
+    for name, (radius, year) in data.items():
+        if DEBUG == True:
+            print(f"Creating {name}: \n  {name.lower()} = Planet({radius}, {year})")
+
+        planet = Planet(radius, year)
         planets.append(planet)
     
     return planets
 
-def distance():
-    pass
+def distance(planet1, planet2, day):
+    x1,y1 = planet1.position(day)
+    x2,y2 = planet2.position(day)
+
+    distance = math.sqrt((x2 - x1)**2 + (y2 -y1)**2)
+    
+    return distance
 
 # MAIN PROGRAM FUNCTION
 def main():
     test_mercury()
 
-    big_bang()
+    planets = big_bang()
 
-    d = distance(earth,mars, 732)
+    earth = None
+    mars = None
+
+    for planet in planets:
+        if isinstance(planet, Planet) and planet.radius == 9.3:
+            earth = planet
+        elif isinstance(planet, Planet) and planet.radius == 14.2:
+            mars = planet
+
+    if earth and mars:
+        d = distance(earth,mars, 732)
+        print(f"Distance between Earth and Mars:\n{d:.2f}")
 
 # MAIN PROGRAM INVOCATION
 if __name__ == "__main__":
+    DEBUG = False
     main()
