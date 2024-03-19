@@ -7,7 +7,7 @@
 # Usage: /usr/bin/python3 ARodriguez_HW01_dice-n-cups.py
 # Alternate Python Usage: /usr/bin/python3 -m ARodriguez_HW01_dice-n-cups
 # Alternate CLI Usage: ./ARodriguez_HW01_dice-n-cups.py
-# Git Repo URL: https://github.com/Mrmachine3/DPU-DSC430.git
+# Git Repo URL: https://github.com/Mrmachine3/DPU-DSHW5/ARodriguez_HW01_dice-n-cups.pyC430.git
 # Video Explanation URL: https://youtu.be/f5bCLkVPMDg
 #
 # Description:
