@@ -8,7 +8,7 @@
 # Alternate Python Usage: /usr/bin/python3 -m ARodriguez_HW10_closest_planet
 # Alternate CLI Usage: ./ARodriguez_HW10_closest_planet.py
 # Git Repo URL: https://github.com/Mrmachine3/DPU-DSC430.git
-# Video Explanation URL:
+# Video Explanation URL: https://youtu.be/4AfZRKpUYVs
 #
 # Description:
 
