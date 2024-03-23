@@ -1,18 +1,16 @@
-Author: Anthony M. Rodriguez
+Author: **Anthony M. Rodriguez (#1205104)**
 
-Student ID#: 1205104
+Class: **DSC 430 - Python Programming**
 
-Class: DSC 430 - Python Programming
-
-Date: 01/24/2024
+Date: 03/19/2024
 
 Honor Statement: I have not given or received any unauthorized assistance on this assignment.
 
 Assignment Details:
 
-- Git Repo URL: [DSC 430 - https://github.com/Mrmachine3/DPU-DSC430.git](https://github.com/Mrmachine3/DPU-DSC430.git)
+- Git Repo URL: [**DSC 430 - https://github.com/Mrmachine3/DPU-DSC430.git**](https://github.com/Mrmachine3/DPU-DSC430.git)
 
-- Video Explanation URL: [Top Down Design Overview of Closest Planet - https://youtu.be/4AfZRKpUYVs](https://youtu.be/4AfZRKpUYVs)
+- Video Explanation URL: [**Top Down Design Overview of Closest Planet - https://youtu.be/4AfZRKpUYVs**](https://youtu.be/4AfZRKpUYVs)
 
 # ***Top Down Design of Closest Planet***
 
